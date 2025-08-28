@@ -1,4 +1,4 @@
-import { serverClient } from '@/lib/supabaseServer'
+import { serverClient } from '../lib/supabaseServer'
 
 export default async function sitemap() {
   const base = process.env.NEXT_PUBLIC_SITE_URL || 'https://your-vercel-domain.vercel.app'
