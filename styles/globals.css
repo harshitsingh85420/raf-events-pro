@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --cream:#FFF7ED; }
+html { scroll-behavior:smooth; }
+body { @apply bg-[var(--cream)] text-slate-900 dark:bg-navy-950 dark:text-slate-100; }
+
+.card { box-shadow: 0 12px 30px rgba(0,0,0,.08); }
+
+.hero-bg { background:
+  radial-gradient(1000px 600px at 20% 0%, rgba(252,211,77,.35), transparent 60%),
+  radial-gradient(800px 500px at 90% 20%, rgba(251,113,133,.25), transparent 60%);
+}
+
+@keyframes shimmer { 0%{background-position:-200% 0} 100%{background-position:200% 0} }
+.skeleton{
+  background:linear-gradient(90deg,#0000 0%,#0001 20%,#0000 40%);
+  background-size:200% 100%;
+  animation:shimmer 1.4s infinite;
+}
+
+@keyframes floaty { 0%{transform:translateY(0)} 50%{transform:translateY(-6px)} 100%{transform:translateY(0)} }
+.floaty { animation: floaty 6s ease-in-out infinite; }
